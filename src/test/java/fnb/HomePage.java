@@ -1,9 +1,12 @@
 package fnb;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.testng.annotations.Factory;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
@@ -14,8 +17,10 @@ public class HomePage {
     @FindBy(how = How.ID, using = "OBSubmit")
     WebElement loginBtn;
 
-    public HomePage(){
-
+    WebDriverWait wait;
+    public HomePage(WebDriver driver){
+        PageFactory.initElements(driver,this);
+        wait = new WebDriverWait(driver,60);
     }
     public void loginToFnbOnSite(String user, String pass) {
         username.sendKeys(user);
