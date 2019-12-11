@@ -1,6 +1,7 @@
-package fnb;
+package fnb.landingpage;
 
 import com.sun.org.glassfish.gmbal.Description;
+import fnb.login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,14 +12,15 @@ import util.BaseTest;
 
 public class HomePageTest extends BaseTest {
     WebDriver driver;
-    HomePage homePage;
+    LoginPage homePage;
 
     @BeforeMethod
+    @Override
     public void setup() {
         super.setup();
         System.out.println("First line");
         driver = new ChromeDriver();
-        homePage = new HomePage(driver);
+        homePage = new LoginPage(driver);
     }
 
     @Description("Confirming the Title of the landing Page")
