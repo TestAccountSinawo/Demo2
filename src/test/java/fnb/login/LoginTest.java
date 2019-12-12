@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
         loginPage.loginToFnbOnSite(CORRECT_USERNAME, CORRECT_PASSWORD);
         String loginPageTitle = driver.getTitle();
         System.out.println(loginPageTitle);
-        Assert.assertEquals(loginPageTitle, "Online banking", "Make sure you are successfully logged on");
+        Assert.assertEquals(loginPageTitle, "Home - First National Bank - FNB", "Make sure you are successfully logged on");
     }
 
     @AfterMethod(alwaysRun = true)
