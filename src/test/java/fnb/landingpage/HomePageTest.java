@@ -1,6 +1,5 @@
 package fnb.landingpage;
 
-import com.sun.org.glassfish.gmbal.Description;
 import fnb.login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +22,6 @@ public class HomePageTest extends BaseTest {
         homePage = new LoginPage(driver);
     }
 
-    @Description("Confirming the Title of the landing Page")
     @Test(description = "Confirming the Title of the landing Page")
     public void homePageTitle() {
         String expectedTitle = "Home - First National Bank - FNB";
