@@ -34,6 +34,14 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.glassfish.gmbal/gmbal -->
+        <dependency>
+            <groupId>org.glassfish.gmbal</groupId>
+            <artifactId>gmbal</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
