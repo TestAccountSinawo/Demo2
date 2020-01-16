@@ -20,6 +20,7 @@ public class HomePageTest extends BaseTest {
         System.out.println("First line");
         driver = new ChromeDriver();
         homePage = new LoginPage(driver);
+
     }
 
     @Test(description = "Confirming the Title of the landing Page")

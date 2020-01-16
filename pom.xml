@@ -21,7 +21,6 @@
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
-
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -33,15 +32,12 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.glassfish.gmbal/gmbal -->
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
         <dependency>
-            <groupId>org.glassfish.gmbal</groupId>
-            <artifactId>gmbal</artifactId>
-            <version>4.0.0</version>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.5</version>
         </dependency>
-
-
     </dependencies>
 
 </project>

@@ -9,8 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import util.BaseTest;
 
-import static fnb.data.TestData.CorrectData.*;
-import static fnb.data.TestData.IncorrectData.*;
+import static fnb.data.TestData1.CorrectData.*;
+import static fnb.data.TestData1.IncorrectData.*;
 
 public class LoginTest extends BaseTest {
 
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
         loginPage.loginToFnbOnSite(CORRECT_USERNAME, CORRECT_PASSWORD);
         String loginPageTitle = driver.getTitle();
         System.out.println(loginPageTitle);
-        Assert.assertEquals(loginPageTitle, "Home - First National Bank - FNB", "Make sure you are successfully logged on");
+        Assert.assertEquals(loginPageTitle, "Home - First National Bank - FNB123", "Make sure you are successfully logged on");
     }
 
     @AfterMethod(alwaysRun = true)

@@ -1,14 +1,14 @@
 package fnb.data;
 
-public class TestData {
+public interface TestData1 {
 
-    public interface IncorrectData{
+     interface IncorrectData {
         String INCORRECT_USERNAME = "QWERTY";
         String INCORRECT_PASSWORD = "DUMMYUSER";
-        String VALIDATION_ERROR="Your login details have been entered incorrectly";
+        String VALIDATION_ERROR = "Your login details have been entered incorrectly";
     }
 
-    public interface CorrectData{
+    interface CorrectData {
         String CORRECT_USERNAME = "Automation1176832";
         String CORRECT_PASSWORD = "asdfgh";
     }
