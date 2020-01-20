@@ -29,6 +29,7 @@ public class HomePageTest extends BaseTest {
         driver.get("https://online.p.fnb.co.za/");
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not MATCH");
+
     }
 
     @AfterMethod(alwaysRun = true)
