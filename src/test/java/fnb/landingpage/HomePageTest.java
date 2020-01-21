@@ -3,6 +3,7 @@ package fnb.landingpage;
 import fnb.login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,7 +18,9 @@ public class HomePageTest extends BaseTest {
     @Override
     public void setup() {
         super.setup();
-        System.out.println("First line");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(chromeOptions);
         driver = new ChromeDriver();
         homePage = new LoginPage(driver);
 
