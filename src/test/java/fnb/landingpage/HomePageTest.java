@@ -21,7 +21,6 @@ public class HomePageTest extends BaseTest {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);
-        driver = new ChromeDriver();
         homePage = new LoginPage(driver);
 
     }
