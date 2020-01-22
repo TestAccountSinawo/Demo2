@@ -3,8 +3,8 @@
 <suite name="Test Suite" verbose="2">
     <test name="FRB Life - POC">
         <classes>
-            <class name="fnb.landingpage.HomePageTest" />
-            <class name="fnb.login.LoginTest" />
+            <class name="fnb.landingpage.HomePageTest"/>
+            <class name="fnb.login.LoginTest"/>
         </classes>
     </test>
 </suite>
