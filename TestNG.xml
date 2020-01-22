@@ -1,0 +1,10 @@
+<suite name="Test Suite" verbose="2">
+    <test name="FRB Life - POC">
+        <classes>
+            <class name="fnb.landingpage.HomePageTest"/>
+            <class name="fnb.login.LoginTest"/>
+        </classes>
+        <classes>...</classes>
+    </test>
+    <test name="FRB Life - POC">...</test>
+</suite>
