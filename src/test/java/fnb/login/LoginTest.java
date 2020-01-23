@@ -1,5 +1,7 @@
 package fnb.login;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,6 +17,8 @@ import util.BaseTest;
 import static fnb.data.TestData1.CorrectData.*;
 import static fnb.data.TestData1.IncorrectData.*;
 
+
+@Feature("Login Tests")
 public class LoginTest extends BaseTest {
 
     LoginPage loginPage;
@@ -34,26 +38,28 @@ public class LoginTest extends BaseTest {
         wait = new WebDriverWait(driver, 60);
     }
 
-    @Test(description = "The unregistered user should not be able to login to the online portal")
+    @Description("Unregistered User: The unregistered user should not be able to login to the online portal")
+    @Test(priority = 1, description = "The unregistered user should not be able to login to the online portal")
     public void unsuccessfulLogin() {
         loginPage.loginToFnbOnSite(INCORRECT_USERNAME, INCORRECT_PASSWORD);
 
         if (driver.getCurrentUrl().equals("https://online.p.fnb.co.za/")) {
             String pageSource = driver.getPageSource();
             Assert.assertTrue(pageSource.contains(VALIDATION_ERROR), "Login was not successful!");
-            log.info("====Displayed message ====: {}",pageSource);
+            log.info("====Displayed message ====: {}", pageSource);
         } else {
             System.out.println("Not navigated to the correct page");
         }
     }
 
-    @Test(description = "As the registered user I should be able to login to the Online Portal")
+    @Test(priority = 1,description = "As the registered user I should be able to login to the Online Portal")
+    @Description("Registered User: User should have login access")
     public void successfulLogin() throws InterruptedException {
         loginPage.loginToFnbOnSite(CORRECT_USERNAME, CORRECT_PASSWORD);
         String loginPageTitle = driver.getTitle();
         System.out.println(loginPageTitle);
         Assert.assertEquals(loginPageTitle, "Home - First National Bank - FNB", "Make sure you are successfully logged on");
-        log.info("===Page Title: {}===",loginPageTitle);
+        log.info("===Page Title: {}===", loginPageTitle);
     }
 
     @AfterMethod(alwaysRun = true)
